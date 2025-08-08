@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+    <style>
+        body {
+            background: linear-gradient(120deg, #ffc400 0%, #fff 100%);
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO: Descripción para la página de modelos -->
+    <meta name="description" content="Explore el catálogo completo de retroexcavadoras JGC. Compare modelos y acceda a las fichas técnicas detalladas de cada equipo.">
+    
+    <!-- SEO: Título para la página de modelos -->
+    <title>Modelos de Retroexcavadoras | JGC Colombia</title>
+    
+    <!-- Google Fonts para un look profesional -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- =================================================================== -->
+    <!-- ======================= ESTILOS CSS INTEGRADOS ==================== -->
+    <!-- =================================================================== -->
+    <style>
+        /* --- Variables Globales (Fácil de personalizar) --- */
+        :root {
+            --primary-color: #ffc400; /* Amarillo construcción, muy visible */
+            --dark-color: #1a1a1a;
+            --medium-gray: #333;
+            --light-gray: #f4f4f4;
+            --text-color: #333;
+            --font-heading: 'Oswald', sans-serif; /* Robusta y fuerte */
+            --font-body: 'Roboto', sans-serif;
+            --container-width: 1200px;
+        }
+
+        /* --- Reset y Estilos Base --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-body);
+            line-height: 1.7;
+            background-color: #fff;
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        /* --- Header y Navegación --- */
+        .main-header {
+            background-color: var(--dark-color);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .main-nav ul li {
+            margin-left: 30px;
+        }
+
+        .main-nav a {
+            color: #fff;
+            font-weight: 700;
+            padding-bottom: 5px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .main-nav a:hover, .main-nav a.active {
+            color: var(--primary-color);
+            border-bottom-color: var(--primary-color);
+        }
+        
+        /* --- Estilos de Página de Modelos --- */
+        .page-header {
+            padding: 4rem 0;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .page-header h1 {
+            font-size: 3.5rem;
+            color: var(--dark-color);
+        }
+
+        .modelos-grid {
+            padding: 4rem 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .modelo-card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .modelo-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .modelo-card-image img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .modelo-card-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .modelo-card-content h3 {
+            font-size: 1.6rem;
+            color: var(--dark-color);
+        }
+
+        .modelo-card-content p {
+            flex-grow: 1;
+            margin: 0.5rem 0 1.5rem 0;
+        }
+
+        .cta-button-secondary {
+            display: inline-block;
+            background-color: var(--medium-gray);
+            color: #fff;
+            padding: 12px 25px;
+            text-align: center;
+            border-radius: 5px;
+            align-self: flex-start;
+            font-weight: 700;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button-secondary:hover {
+            background-color: var(--dark-color);
+        }
+
+        /* --- Footer --- */
+        .main-footer {
+            background-color: var(--dark-color);
+            color: #aaa;
+            text-align: center;
+            padding: 2.5rem 0;
+            margin-top: 3rem;
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 768px) {
+            .main-header .container {
+                flex-direction: column;
+            }
+            .main-nav ul {
+                margin-top: 1rem;
+            }
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- =================================================================== -->
+    <!-- ======================= HEADER / NAVEGACIÓN ======================= -->
+    <!-- =================================================================== -->
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">JGC</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="modelos.html" class="active">Modelos</a></li>
+                    <li><a href="#">Soporte</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header container">
+            <h1>Nuestra Flota</h1>
+            <p>Encuentre la retroexcavadora perfecta para la escala y exigencia de su trabajo.</p>
+        </section>
+        
+        <section class="modelos-grid container">
+
+            <!-- =============================================================== -->
+            <!-- PARA AGREGAR UN NUEVO MODELO: COPIE Y PEGUE ESTE BLOQUE <article> -->
+            <!-- =============================================================== -->
+            <article class="modelo-card">
+                <div class="modelo-card-image">
+                    <img src="img/HW220-9-1.jpg" alt="Retroexcavadora JGC Modelo HW220-9 en obra">
+                </div>
+                <div class="modelo-card-content">
+                    <h3>Modelo HW220-9</h3>
+                    <p>Ágil y potente. La solución ideal para proyectos urbanos y de construcción general.</p>
+                    <a href="ficha-tecnica-HW220-9.html" class="cta-button-secondary">Ver Ficha Técnica</a>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <!-- =================================================================== -->
+    <!-- ======================= FOOTER / PIE DE PÁGINA ==================== -->
+    <!-- =================================================================== -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 JGC Colombia. Todos los derechos reservados.</p>
+            <p>Línea de atención: +57 601 123 4567 | Email: ventas@tumarca.com.co</p>
+            <hr style="margin:2rem 0;opacity:0.1;">
+            <div style="margin-top:0.5rem;display:flex;flex-direction:column;align-items:center;opacity:0.7;">
+                <span style="font-size:0.95rem;color:#888;">Sitio desarrollado por Viktor Grajales</span>
+                <div style="margin-top:0.3rem;display:flex;gap:1.2rem;justify-content:center;">
+                    <a href="https://github.com/farkot09" target="_blank" title="GitHub" style="display:inline-block;">
+                        <svg width="24" height="24" fill="#888" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.757-1.333-1.757-1.089-.745.083-.729.083-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.332-5.466-5.93 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.43.371.823 1.102.823 2.222v3.293c0 .322.218.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/viktor-grajales-34b990125/" target="_blank" title="LinkedIn" style="display:inline-block;">
+                        <svg width="24" height="24" fill="#888" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.337-.026-3.063-1.868-3.063-1.868 0-2.154 1.459-2.154 2.967v5.7h-3v-10h2.881v1.367h.041c.401-.761 1.379-1.563 2.838-1.563 3.036 0 3.597 2.001 3.597 4.604v5.592z"/></svg>
+                    </a>
+                    <a href="https://farkot09.github.io/" target="_blank" title="Portafolio" style="display:inline-block;">
+                        <svg width="24" height="24" fill="#888" viewBox="0 0 24 24"><path d="M12 0C5.371 0 0 5.371 0 12c0 6.629 5.371 12 12 12s12-5.371 12-12c0-6.629-5.371-12-12-12zm0 22.153c-5.607 0-10.153-4.546-10.153-10.153S6.393 1.847 12 1.847 22.153 6.393 22.153 12 17.607 22.153 12 22.153zm0-17.306c-3.949 0-7.153 3.204-7.153 7.153s3.204 7.153 7.153 7.153 7.153-3.204 7.153-7.153-3.204-7.153-7.153-7.153zm0 13.306c-3.395 0-6.153-2.758-6.153-6.153s2.758-6.153 6.153-6.153 6.153 2.758 6.153 6.153-2.758 6.153-6.153 6.153z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

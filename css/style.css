@@ -1,0 +1,240 @@
+/* --- Variables y Reset Básico --- */
+:root {
+    --primary-color: #ffc107; /* Amarillo/Naranja de construcción */
+    --dark-color: #212529;
+    --medium-gray: #6c757d;
+    --light-color: #f8f9fa;
+    --font-main: 'Roboto', sans-serif;
+    --font-heading: 'Oswald', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-main);
+    line-height: 1.6;
+    background-color: #fff;
+    color: #333;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Header y Navegación --- */
+/* --- Títulos globales --- */
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+.main-header {
+    background-color: var(--dark-color);
+    color: #fff;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.main-header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-header nav ul li {
+    margin-left: 25px;
+}
+
+.main-header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.main-header nav a:hover {
+    color: var(--primary-color);
+}
+
+/* --- Hero Section (Página Inicio) --- */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/principal.jpg') no-repeat center center / cover;
+    height: 60vh;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-family: var(--font-heading);
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--dark-color);
+    padding: 12px 25px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+}
+
+/* --- Secciones Generales --- */
+.features, .page-title, .modelos-grid, .ficha-container {
+    padding: 4rem 0;
+}
+
+.features h2, .page-title h1 {
+    font-family: var(--font-heading);
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 3rem;
+    color: var(--dark-color);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+/* --- Página de Modelos --- */
+.modelos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.modelo-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modelo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.modelo-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.modelo-card-content {
+    padding: 1.5rem;
+}
+
+.modelo-card-content h3 {
+    font-family: var(--font-heading);
+    color: var(--dark-color);
+    margin-bottom: 0.5rem;
+}
+
+.cta-button-secondary {
+    display: inline-block;
+    background-color: var(--dark-color);
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+.cta-button-secondary:hover {
+    background-color: var(--medium-gray);
+}
+
+/* --- Página Ficha Técnica --- */
+.ficha-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+.ficha-gallery img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.specs-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+}
+
+.specs-table td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.specs-table tr:nth-child(even) {
+    background-color: var(--light-color);
+}
+
+/* --- Footer --- */
+.main-footer {
+    background-color: var(--dark-color);
+    color: var(--medium-gray);
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .features-grid, .ficha-container {
+        grid-template-columns: 1fr;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .main-header .container {
+        flex-direction: column;
+    }
+    .main-header nav ul {
+        padding: 1rem 0;
+    }
+}
