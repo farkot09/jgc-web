@@ -1,56 +1,5 @@
 
-// 1. Menú hamburguesa responsive
-document.addEventListener('DOMContentLoaded', function() {
-    const nav = document.querySelector('.main-nav ul');
-    const header = document.querySelector('.main-header .container');
-    if (!nav || !header) return;
-    let burger = document.querySelector('.burger-menu');
-    if (!burger) {
-        burger = document.createElement('button');
-        burger.className = 'burger-menu';
-        burger.innerHTML = '&#9776;';
-        burger.style.display = 'none';
-        burger.style.fontSize = '2rem';
-        burger.style.background = 'none';
-        burger.style.border = 'none';
-        burger.style.color = '#fff';
-        burger.style.cursor = 'pointer';
-        burger.style.marginLeft = '20px';
-        header.appendChild(burger);
-    }
-    function checkWidth() {
-        if (window.innerWidth <= 768) {
-            burger.style.display = 'block';
-            nav.style.display = 'none';
-        } else {
-            burger.style.display = 'none';
-            nav.style.display = 'flex';
-            nav.style.position = '';
-            nav.style.background = '';
-            nav.style.flexDirection = '';
-            nav.style.width = '';
-            nav.style.borderRadius = '';
-            nav.style.boxShadow = '';
-        }
-    }
-    checkWidth();
-    window.addEventListener('resize', checkWidth);
-    burger.addEventListener('click', function() {
-        if (nav.style.display === 'block') {
-            nav.style.display = 'none';
-        } else {
-            nav.style.display = 'block';
-            nav.style.background = '#1a1a1a';
-            nav.style.position = 'absolute';
-            nav.style.top = '60px';
-            nav.style.right = '20px';
-            nav.style.flexDirection = 'column';
-            nav.style.width = '200px';
-            nav.style.borderRadius = '8px';
-            nav.style.boxShadow = '0 2px 10px rgba(0,0,0,0.3)';
-        }
-    });
-});
+// Eliminado menú hamburguesa para mostrar menú siempre visible en móvil
 
 // 2. Modal de contacto para "Solicitar Asesoría"
 document.addEventListener('DOMContentLoaded', function() {
