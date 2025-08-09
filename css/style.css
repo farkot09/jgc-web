@@ -252,4 +252,20 @@ h1, h2, h3 {
     .main-header nav ul li {
         margin: 0 18px;
     }
+    .ficha-container > div {
+        width: 100% !important;
+    }
+    #qr-ficha-lateral {
+        margin-left: 0 !important;
+        margin-top: 2rem !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        order: 2;
+    }
+    .ficha-specs {
+        order: 1;
+    }
+    .ficha-container > div {
+        display: block !important;
+    }
 }
