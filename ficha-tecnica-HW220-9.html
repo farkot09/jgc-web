@@ -9,6 +9,39 @@
     <title>Ficha Técnica Retroexcavadora HW220-9 | JGC</title>
     
     <link rel="stylesheet" href="css/style.css">
+    <style>
+    @media (max-width: 768px) {
+        .page-title h1 {
+            font-size: 2rem;
+            word-break: break-word;
+        }
+        .ficha-container {
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .ficha-gallery img {
+            max-width: 100%;
+            height: auto;
+        }
+        .ficha-specs {
+            width: 100%;
+        }
+        .specs-table td {
+            font-size: 0.95rem;
+            word-break: break-word;
+        }
+        .cta-button-secondary, .cta-button {
+            width: 100%;
+            box-sizing: border-box;
+        }
+    }
+    .ficha-container {
+        display: flex;
+        gap: 3rem;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+    </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -58,7 +91,7 @@
         <!-- ======================= TÍTULO Y NAVEGACIÓN ======================= -->
         <section class="page-title">
             <div class="container">
-                <h1>Retroexcavadora HW220-9</h1>
+                <h1>HW220-9 Excavadora de 22 toneladas</h1>
                 <p>
                   <a href="modelos.html" class="cta-button-secondary" style="margin-right:1rem">← Ver más modelos JGC</a>
                   <a href="ficha-tecnica-HW220-9.pdf" class="cta-button-secondary" download>Descargar Ficha Técnica PDF</a>
@@ -67,19 +100,16 @@
         </section>
 
         <!-- ======================= GALERÍA DE IMÁGENES DEL MODELO ======================= -->
-        <!-- Para cada modelo, las imágenes van en img/MODELO-1.jpg ... img/MODELO-4.jpg -->
         <div class="ficha-container container">
             <div class="ficha-gallery">
-                <!-- Galería principal del modelo -->
-                <img id="main-img" src="img/HW220-9-1.jpg" alt="Vista principal de la Retroexcavadora HW220-9" style="max-width:100%;border-radius:8px;box-shadow:0 4px 16px #0002;transition:0.2s;">
+                <img id="main-img" src="img/HW220-9-1.jpg" alt="HW220-9 Excavadora de 22 toneladas" style="max-width:100%;border-radius:8px;box-shadow:0 4px 16px #0002;transition:0.2s;">
                 <div id="thumbs" style="display:flex;gap:1rem;margin-top:1rem;justify-content:center;">
                     <img src="img/HW220-9-1.jpg" alt="Vista principal" class="thumb active" style="width:100px;cursor:pointer;border-radius:6px;box-shadow:0 2px 8px #0002;border:2px solid #ffc400;">
-                    <img src="img/HW220-9-2.jpg" alt="Retroexcavadora HW220-9 lateral" class="thumb" style="width:100px;cursor:pointer;border-radius:6px;box-shadow:0 2px 8px #0002;">
-                    <img src="img/HW220-9-3.jpg" alt="Retroexcavadora HW220-9 operando" class="thumb" style="width:100px;cursor:pointer;border-radius:6px;box-shadow:0 2px 8px #0002;">
-                    <img src="img/HW220-9-4.jpg" alt="Retroexcavadora HW220-9 detalle" class="thumb" style="width:100px;cursor:pointer;border-radius:6px;box-shadow:0 2px 8px #0002;">
+                    <img src="img/HW220-9-2.jpg" alt="HW220-9 lateral" class="thumb" style="width:100px;cursor:pointer;border-radius:6px;box-shadow:0 2px 8px #0002;">
+                    <img src="img/HW220-9-3.jpg" alt="HW220-9 operando" class="thumb" style="width:100px;cursor:pointer;border-radius:6px;box-shadow:0 2px 8px #0002;">
+                    <img src="img/HW220-9-4.jpg" alt="HW220-9 detalle" class="thumb" style="width:100px;cursor:pointer;border-radius:6px;box-shadow:0 2px 8px #0002;">
                 </div>
                 <script>
-                // Interactividad galería: cambiar imagen principal al hacer clic en miniatura
                 document.addEventListener('DOMContentLoaded', function() {
                   const mainImg = document.getElementById('main-img');
                   const thumbs = document.querySelectorAll('#thumbs .thumb');
@@ -96,8 +126,7 @@
                 </script>
             </div>
             <div class="ficha-specs">
-                <!-- Especificaciones técnicas principales -->
-                <h2>Especificaciones Principales</h2>
+                <h2>Especificaciones Reales</h2>
                 <table class="specs-table">
                     <tbody>
                         <tr>
@@ -106,35 +135,36 @@
                         </tr>
                         <tr>
                             <td><strong>Motor</strong></td>
-                            <td>JGC D4.4 Turbo</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Potencia Neta (ISO 9249)</strong></td>
-                            <td>74.5 kW / 100 HP</td>
+                            <td>Cummins, 133 kW / 2000 rpm, Emisiones CN II</td>
                         </tr>
                         <tr>
                             <td><strong>Peso Operativo</strong></td>
-                            <td>7,800 kg</td>
+                            <td>22,000 kg</td>
                         </tr>
                         <tr>
-                            <td><strong>Profundidad de Excavación</strong></td>
-                            <td>4.34 m</td>
-                        </tr>
-                         <tr>
-                            <td><strong>Capacidad del Cucharón Frontal</strong></td>
-                            <td>1.1 m³</td>
+                            <td><strong>Capacidad del cucharón</strong></td>
+                            <td>1 m³</td>
                         </tr>
                         <tr>
-                            <td><strong>Fuerza de Desgarre (Cucharón)</strong></td>
-                            <td>54.3 kN</td>
+                            <td><strong>Fuerza de excavación</strong></td>
+                            <td>145 kN</td>
                         </tr>
                         <tr>
-                            <td><strong>Transmisión</strong></td>
-                            <td>PowerShift 4x4</td>
+                            <td><strong>Ventajas</strong></td>
+                            <td>
+                                <ul style="padding-left:1.2em;">
+                                    <li>Motor Cummins potente y eficiente</li>
+                                    <li>Operación flexible en espacios reducidos</li>
+                                    <li>Estructura robusta y sistema hidráulico avanzado</li>
+                                    <li>Control inteligente y preciso</li>
+                                    <li>Fabricación de precisión y pruebas rigurosas</li>
+                                </ul>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
-                <a href="#" class="cta-button">Solicitar Cotización</a>
+                                <a href="#" class="cta-button" id="wa-cotizar">Solicitar Cotización</a>
+                                <!-- Modal y lógica WhatsApp ahora en js/wa-modal-cotizar.js -->
             </div>
         </div>
     </main>
@@ -161,5 +191,6 @@
         </div>
     </footer>
 
+<script src="js/wa-modal-cotizar.js"></script>
 </body>
 </html>
