@@ -10,7 +10,7 @@
         var pdfUrl = pdfLink ? pdfLink.getAttribute('href') : '';
         if(!pdfUrl) return;
         qrLateral.innerHTML = '<span style="font-size:0.95rem;color:#555;margin-bottom:0.3rem;">Descarga rápida:</span>'+
-            '<canvas id="qr-canvas" width="120" height="120" style="margin-bottom:0.3rem;"></canvas>'+
+            '<canvas id="qr-canvas" width="180" height="180" style="margin-bottom:0.3rem;"></canvas>'+
             '<a href="'+pdfUrl+'" download style="font-size:0.9rem;color:#222;text-decoration:underline;">Ficha PDF</a>';
         // Genera el QR usando una librería ligera
         var script = document.createElement('script');
@@ -19,7 +19,7 @@
             var qr = new QRious({
                 element: document.getElementById('qr-canvas'),
                 value: window.location.origin + '/' + pdfUrl,
-                size: 120,
+                size: 180,
                 background: 'white',
                 foreground: '#222'
             });
