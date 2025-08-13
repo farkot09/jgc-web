@@ -255,94 +255,91 @@
         >
           <div class="ficha-specs" style="flex: 1; min-width: 260px">            
             <h2>Especificaciones Reales</h2>
-            <table class="specs-table">
+            <style>
+              .specs-table {width:100%; border-collapse: collapse; font-size:.92rem;}
+              .specs-table td, .specs-table th {padding:.45rem .6rem; border:1px solid #e2e2e2; vertical-align: top;}
+              .specs-table .section th {background:#222; color:#fff; font-size:.8rem; letter-spacing:.5px; text-transform:uppercase; text-align:left;}
+              .specs-table strong{font-weight:600;}
+              .spec-note{font-size:.7rem; opacity:.75; margin-top:.4rem;}
+              @media print { .specs-table td, .specs-table th {padding:.3rem .4rem;} }
+            </style>
+            <table class="specs-table" aria-describedby="specs-nota">
               <tbody>
-                <tr>
-                  <td><strong>Modelo</strong></td>
-                  <td>HW-220 Medium Excavator</td>
-                </tr>
-                <tr>
-                  <td><strong>Cantidad (T)</strong></td>
-                  <td>22</td>
-                </tr>
-                <tr>
-                  <td><strong>Mecánico/Piloto</strong></td>
-                  <td>Piloto</td>
-                </tr>
-                <tr>
-                  <td><strong>Combustible</strong></td>
-                  <td>Gasolina *</td>
-                </tr>
-                <tr>
-                  <td><strong>Aire Acondicionado</strong></td>
-                  <td>Sin Aire Acondicionado *</td>
-                </tr>
-                <tr>
-                  <td><strong>Modelo de Motor</strong></td>
-                  <td>6BTA5.9</td>
-                </tr>
-                <tr>
-                  <td><strong>Potencia (KW)</strong></td>
-                  <td>133KW/2000rpm</td>
-                </tr>
-                <tr>
-                  <td><strong>Marca Motor Rotatorio</strong></td>
-                  <td>Eaton</td>
-                </tr>
-                <tr>
-                  <td><strong>Marca Motor de Traslación</strong></td>
-                  <td>Eaton</td>
-                </tr>
-                <tr>
-                  <td><strong>Volumen del Cucharón (m³)</strong></td>
-                  <td>1</td>
-                </tr>
-                <tr>
-                  <td><strong>Largo x Ancho x Alto (mm)</strong></td>
-                  <td>9390×2780×3120</td>
-                </tr>
-                <tr>
-                  <td>
-                    <strong>Profundidad Máxima de Excavación (mm)</strong>
-                  </td>
-                  <td>6515</td>
-                </tr>
-                <tr>
-                  <td><strong>Altura Máxima de Excavación (mm)</strong></td>
-                  <td>9275</td>
-                </tr>
-                <tr>
-                  <td><strong>Altura Máxima de Descarga (mm)</strong></td>
-                  <td>6560</td>
-                </tr>
-                <tr>
-                  <td><strong>Radio Máximo de Excavación (mm)</strong></td>
-                  <td>9680</td>
-                </tr>
-                <tr>
-                  <td><strong>Radio Mínimo de Giro (mm)</strong></td>
-                  <td>3630</td>
-                </tr>
-                <tr>
-                  <td><strong>Características HW-220</strong></td>
-                  <td>
-                    <ul style="padding-left: 1.2em">
-                      <li>
-                        El cucharón tiene una gran capacidad de 1 metro cúbico
-                      </li>
-                      <li>
-                        La excavadora HW-220 de 22 toneladas es la combinación
-                        perfecta de potencia y refinamiento
-                      </li>
-                      <li>
-                        Operación simple y mantenimiento, ahorrando mucho tiempo
-                        y costo
-                      </li>
-                    </ul>
-                  </td>
-                </tr>
+                <tr class="section"><th colspan="2">General</th></tr>
+                <tr><td><strong>Modelo Motor</strong></td><td>Isuzu 6BG1 TRP</td></tr>
+                <tr><td><strong>Combustible</strong></td><td>Gasolina *</td></tr>
+                <tr><td><strong>Aire Acondicionado</strong></td><td>Sin Aire Acondicionado *</td></tr>
+                <tr><td><strong>Tipo</strong></td><td>Interenfriado</td></tr>
+                <tr><td><strong>Número de cilindros</strong></td><td>6</td></tr>
+                <tr><td><strong>Regulación de emisiones</strong></td><td>Tier 2 / Etapa II</td></tr>
+                <tr><td><strong>Desplazamiento</strong></td><td>6.5 L</td></tr>
+                <tr><td><strong>Potencia de salida</strong></td><td>128.5 kW / 2100 rpm</td></tr>
+
+                <tr class="section"><th colspan="2">SISTEMA HIDRÁULICO</th></tr>
+                <tr><td><strong>Tipo</strong></td><td>Control de flujo negativo</td></tr>
+                <tr><td><strong>Máx. flujo de descarga</strong></td><td>2 × 228 L/min</td></tr>
+
+                <tr class="section"><th colspan="2">FUERZA DE EXCAVACIÓN (ISO6015)</th></tr>  
+                <tr><td><strong>-</strong></td><td>-</td></tr>   
+
+                <tr class="section"><th colspan="2">CUCHARA</th></tr>
+                <tr><td><strong>Tipo</strong></td><td>Cucharón retroexcavadora</td></tr>
+                <tr><td><strong>Capacidad</strong></td><td>1.0 m³</td></tr>
+                <tr><td><strong>Ancho</strong></td><td>1.2 m</td></tr>
+
+                <tr class="section"><th colspan="2">SISTEMA DE TRACCIÓN</th></tr>
+                <tr><td><strong>Tipo</strong></td><td>Motor hidráulico</td></tr>
+                <tr><td><strong>Cantidad de rodillos de soporte</strong></td><td>2 × 7</td></tr>
+                <tr><td><strong>Cantidad de rodillos portadores</strong></td><td>2 × 2</td></tr>
+                <tr><td><strong>Zapatas</strong></td><td>2 × 45</td></tr>
+                <tr><td><strong>Velocidades de desplazamiento</strong></td><td>5.2 / 3.5 km/h</td></tr>
+                <tr><td><strong>Fuerza de tracción en barra</strong></td><td>196 kN</td></tr>
+                <tr><td><strong>Capacidad de pendiente</strong></td><td>70% (35°)</td></tr>
+
+                <tr class="section"><th colspan="2">SISTEMA DE GIRO</th></tr>
+                <tr><td><strong>Tipo de motor de giro</strong></td><td>Motor de émbolo</td></tr>
+                <tr><td><strong>Velocidad de giro</strong></td><td>11.5 rpm</td></tr>
+                <tr><td><strong>Tipo de freno</strong></td><td>Motor hidráulico</td></tr>
+
+                <tr class="section"><th colspan="2">CAPACIDADES DE RECARGA Y LUBRICANTES</th></tr>
+                <tr><td><strong>Combustible</strong></td><td>Gasolina *</td></tr>
+                <tr><td><strong>Aceite motor</strong></td><td>28 L</td></tr>
+                <tr><td><strong>Refrigerante</strong></td><td>20 L</td></tr>
+                <tr><td><strong>Depósito de aceite hidráulico</strong></td><td>246 L</td></tr>
+                <tr><td><strong>Capacidad sistema hidráulico total</strong></td><td>400 L</td></tr>
+                <tr><td><strong>Tanque de combustible</strong></td><td>350 L</td></tr>
+
+                <tr class="section"><th colspan="2">MOTOR / CHASIS</th></tr>
+                <tr><td><strong>Ancho de zapata</strong></td><td>600 / 800 mm</td></tr>
+                <tr><td><strong>Presión sobre el suelo</strong></td><td>46.5 kPa</td></tr>
+                <tr><td><strong>Peso operativo</strong></td><td>21,200 kg (21.2 t)</td></tr>
+
+                <tr class="section"><th colspan="2">ÁMBITO DE TRABAJO (MM)</th></tr>
+                <tr><td><strong>Altura máx. de excavación</strong></td><td>9275</td></tr>
+                <tr><td><strong>Altura máx. de descarga</strong></td><td>6560</td></tr>
+                <tr><td><strong>Profundidad máx. de excavación</strong></td><td>6515</td></tr>
+                <tr><td><strong>Profundidad excavación vertical máx.</strong></td><td>5915</td></tr>
+                <tr><td><strong>Prof. máx. corte (fondo nivel 2500 mm)</strong></td><td>6320</td></tr>
+                <tr><td><strong>Distancia / radio máx. excavación</strong></td><td>9865</td></tr>
+                <tr><td><strong>Radio máx. excavación nivel suelo</strong></td><td>9680</td></tr>
+                <tr><td><strong>Mín. radio giro equipo de trabajo</strong></td><td>3630</td></tr>
+
+                <tr class="section"><th colspan="2">DIMENSIONES GENERALES (MM)</th></tr>
+                <tr><td><strong>Longitud total</strong></td><td>9380</td></tr>
+                <tr><td><strong>Ancho total</strong></td><td>2780</td></tr>
+                <tr><td><strong>Altura superior cabina</strong></td><td>3120</td></tr>
+                <tr><td><strong>Distancia suelo a contrapeso</strong></td><td>1065</td></tr>
+                <tr><td><strong>Distancia al suelo (mínima)</strong></td><td>466</td></tr>
+                <tr><td><strong>Radio de giro de la cola</strong></td><td>2720</td></tr>
+                <tr><td><strong>Longitud de la vía</strong></td><td>4460</td></tr>
+                <!-- Valores adicionales pueden añadirse aquí -->            
+                <tr class="section"><th colspan="2">ACCESORIOS OPCIONALES</th></tr>
+                <tr><td colspan="2">
+                  Destripador, Acoplador, Trituradora hidráulica, Cizalla, Garra ("Lucha"), Cucharón de esqueleto, Concha, Cucharón inclinable.
+                </td></tr>
               </tbody>
             </table>
+            <div id="specs-nota" class="spec-note">Valores “—” o marcados con * pendientes de confirmación / corrección (p.ej. combustible real diésel y disponibilidad de A/C).</div>
             <a href="#" class="cta-button" id="wa-cotizar"
               >Solicitar Cotización</a
             >
